@@ -3,7 +3,8 @@ import rclpy
 from rclpy.node import Node
 from robotx_interfaces.msg import Buzzer
 
-from Arm_Lib import Arm_Device
+#from Arm_Lib import Arm_Device
+from .Arm_Lib.Arm_Lib import Arm_Device
 
 class BuzzerCtrl(Node):
     def __init__(self, node_name,):

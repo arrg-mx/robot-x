@@ -1,6 +1,6 @@
 
 FROM dustynv/ros:humble-desktop-l4t-r32.7.1
-RUN sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg
+RUN curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg
 
 RUN apt-get update -y && apt-get upgrade -y && \
 apt-get install -y curl wget zip vim 

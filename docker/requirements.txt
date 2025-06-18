@@ -1,2 +1,4 @@
 smbus
 smbus2
+setuptools==58.2.0
+pyserial

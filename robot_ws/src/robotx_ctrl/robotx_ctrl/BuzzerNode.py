@@ -1,16 +1,25 @@
 #!/usr/bin/env python3
 import rclpy
 from rclpy.node import Node
+from rclpy.qos import QoSProfile, ReliabilityPolicy,  HistoryPolicy
 from robotx_interfaces.msg import Buzzer
 
-#from Arm_Lib import Arm_Device
 from .Arm_Lib.Arm_Lib import Arm_Device
 
 class BuzzerCtrl(Node):
     def __init__(self, node_name,):
         super().__init__(node_name)
         self._arm_drv = Arm_Device()
-        self._buzzer_sub = self.create_subscription(Buzzer, '/buzzer_cmd', self._on_buzzer_cmd, 10)
+        self._qos_profile = QoSProfile(
+            reliability=ReliabilityPolicy.BEST_EFFORT,
+            history=HistoryPolicy.KEEP_LAST,
+            depth=1
+        )
+        self._buzzer_sub = self.create_subscription(
+            Buzzer, 
+            '/buzzer_cmd', 
+            self._on_buzzer_cmd, 
+            self._qos_profile)
 
     def _on_buzzer_cmd(self, msg:Buzzer):
         delay = msg.delay

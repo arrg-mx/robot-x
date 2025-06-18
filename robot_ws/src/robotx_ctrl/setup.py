@@ -20,7 +20,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'buzzer_ctrl = robotx_ctrl.BuzzerNode:init_node'
+            'buzzer_ctrl = robotx_ctrl.BuzzerNode:init_node',
+            'param_srv = robotx_ctrl.robotx_params:init_node'
         ],
     },
 )

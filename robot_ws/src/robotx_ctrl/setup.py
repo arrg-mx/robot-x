@@ -21,7 +21,9 @@ setup(
     entry_points={
         'console_scripts': [
             'buzzer_ctrl = robotx_ctrl.BuzzerNode:init_node',
-            'param_srv = robotx_ctrl.robotx_params:init_node'
+            'param_srv = robotx_ctrl.robotx_params:init_node',
+            'arm_param_srv = robotx_ctrl.arm_param_srv:init_node',
+            'arm_param_cte = robotx_ctrl.arm_param_cte:init_node'
         ],
     },
 )

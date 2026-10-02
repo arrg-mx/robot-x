@@ -12,7 +12,7 @@ setup(
         ('share/' + package_name, ['package.xml']),
         ('share/' + package_name + "/rviz", glob("rviz/*")),
         ('share/' + package_name + "/urdf", glob("urdf/*")),
-        ('share/' + package_name + "/mujoco", glob("mujoco/*")),
+        ('share/' + package_name + "/mujoco_model", glob("mujoco_model/*")),
         ('share/' + package_name + "/meshes", glob("meshes/*")),
         ('share/' + package_name + "/config", glob("config/*")),
     ],

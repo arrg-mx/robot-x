@@ -3,8 +3,6 @@ import os
 import subprocess
 import tempfile
 import re
-import mujoco
-import mujoco.viewer
 import numpy as np
 from ament_index_python import get_package_share_directory
 

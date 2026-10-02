@@ -4,7 +4,6 @@ import subprocess
 import tempfile
 import re
 import mujoco
-import mujoco.viewer
 import numpy as np
 from ament_index_python import get_package_share_directory
 
@@ -73,9 +72,9 @@ def main(args=None):
     description_path = get_package_share_directory("robotx_description")
     # Rutas de urdf y rviz conf
     urdf_path = description_path + "/urdf/robotx_position.urdf"
-    mujoco_config_file = description_path + "/mujoco/robotx_mujoco_config.xml"
-    mujoco_scene_file = description_path + "/mujoco/robotx_mujoco_scene.xml"
-    mujoco_output_file = description_path + "/mujoco/robotx_mujoco.xml"
+    mujoco_config_file = description_path + "/mujoco_model/robotx_mujoco_config.xml"
+    mujoco_scene_file = description_path + "/mujoco_model/robotx_mujoco_scene.xml"
+    mujoco_output_file = description_path + "/mujoco_model/robotx_mujoco.xml"
     file_tf = MujocoFile(urdf_path, mujoco_config_file, mujoco_scene_file, mujoco_output_file)
     file_tf.process_file()
           

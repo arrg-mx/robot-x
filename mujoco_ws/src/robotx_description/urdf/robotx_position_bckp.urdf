@@ -12,7 +12,7 @@
     <hardware>
       <plugin>mujoco_ros2_control/MujocoSystemInterface</plugin>
       <param name="mujoco_model">
-        $(find robotx_description)/mujoco/robotx_mujoco.xml
+        $(find robotx_description)/mujoco_model/robotx_mujoco.xml
     </param>
     </hardware>
 

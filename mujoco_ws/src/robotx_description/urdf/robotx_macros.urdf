@@ -41,7 +41,7 @@
       <parent link="${parent}" />
       <child link="${child}" />
       <axis xyz="0 0 1" />
-      <limit effort="100" velocity="100.0" lower="${lower}" upper="${upper}"/>
+      <limit effort="1.0" velocity="10.0" acceleration="1.0" lower="${lower}" upper="${upper}"/>
     </joint>
   </xacro:macro>
   <xacro:macro name="fixed_joint" params="name parent child xyz rpy">
@@ -59,7 +59,7 @@
       <parent link="${parent}" />
       <child link="${child}" />
       <axis xyz="0 0 1" />
-      <limit effort="100" velocity="100.0" lower="${lower}" upper="${upper}"/>
+      <limit effort="1.0" velocity="10.0" acceleration="1.0" lower="${lower}" upper="${upper}"/>
       <mimic joint="${mimic}" multiplier="${multiplier}"/>
     </joint>
   </xacro:macro>

@@ -27,3 +27,8 @@ moveit_simple_controller_manager:
 
     joints:
       - joint5a1
+  planning_pipelines:
+    pipeline_names:
+      - ompl
+      - pilz_industrial_motion_planner
+  default_planning_pipeline: ompl

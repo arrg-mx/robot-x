@@ -75,43 +75,43 @@
   <!-- ================= JOINTS ================= -->
   <xacro:revolute_joint name="joint1" parent="base_link" child="link1"
                         xyz="0 0 0.0607" rpy="0 0 0"
-                        lower="${-pi/2}" upper="${pi/2}"/>
+                       lower="${-2}" upper="${2}"/>
 
   <xacro:revolute_joint name="joint2" parent="link1" child="link2"
                         xyz="0 -0.00031873 0.04145" rpy="${-pi/2} ${-pi/2} 0"
-                        lower="${-pi/2}" upper="${pi/2}"/>
+                       lower="${-2}" upper="${2}"/>
 
   <xacro:revolute_joint name="joint3" parent="link2" child="link3"
                         xyz="0.08285 0 0" rpy="0 0 0"
-                        lower="${-pi/2}" upper="${pi/2}"/>
+                       lower="${-2}" upper="${2}"/>
 
   <xacro:revolute_joint name="joint4" parent="link3" child="link4"
                         xyz="0.08285 0 0" rpy="0 0 0"
-                        lower="${-pi/2}" upper="${pi/2}"/>
+                       lower="${-2}" upper="${2}"/>
 
   <xacro:revolute_joint name="joint5" parent="link4" child="link5"
                         xyz="0.07385 -0.001 0" rpy="0 ${pi/2} 0"
-                        lower="${-pi/2}" upper="${pi/2}"/>
+                       lower="${-2}" upper="${2}"/>
 
   <!-- ================= GRIPPER JOINTS ================= -->
   <xacro:revolute_joint name="joint5a1" parent="link5" child="link5a1"
                         xyz="0.0124 0.001 0.0322" rpy="${pi/2} 0 0"
-                        lower="${-pi/2}" upper="${pi/2}"/>
+                       lower="${-2}" upper="${2}"/>
   <xacro:revolute_joint name="joint5a2" parent="link5a1" child="link5a2"
                         xyz="0.03 0 0.0045" rpy="0 0 0"
-                        lower="${-pi/2}" upper="${pi/2}"/> 
+                       lower="${-2}" upper="${2}"/> 
   <xacro:revolute_joint name="joint5a3" parent="link5" child="link5a3"
                         xyz="0.0045 -0.0005 0.0502" rpy="${pi/2} 0 0"
-                        lower="${-pi/2}" upper="${pi/2}"/> 
+                       lower="${-2}" upper="${2}"/> 
   <xacro:revolute_joint name="joint5b1" parent="link5" child="link5b1"
                         xyz="-0.01215 -0.0035 0.0322" rpy="${pi/2} 0 0"
-                        lower="${-pi/2}" upper="${pi/2}"/>
+                       lower="${-2}" upper="${2}"/>
   <xacro:revolute_joint name="joint5b2" parent="link5b1" child="link5b2"
                         xyz="-0.03 -0.0002 0" rpy="0 0 0"
-                        lower="${-pi/2}" upper="${pi/2}"/> 
+                       lower="${-2}" upper="${2}"/> 
   <xacro:revolute_joint name="joint5b3" parent="link5" child="link5b3"
                         xyz="-0.0045 -0.0005 0.0502" rpy="${pi/2} 0 0"
-                        lower="${-pi/2}" upper="${pi/2}"/> 
+                       lower="${-2}" upper="${2}"/> 
   
   <!-- ================= FIXED ================= -->
   <xacro:fixed_joint name="jointcamera" parent="link4" child="linkcam"
